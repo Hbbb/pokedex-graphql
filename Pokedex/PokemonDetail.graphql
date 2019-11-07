@@ -1,0 +1,13 @@
+query PokemonDetail($id: String) {
+  pokemon(id: $id) {
+        ...Detail
+  }
+}
+
+fragment Detail on Pokemon {
+  id
+  name
+  number
+  classification
+  weaknesses
+}

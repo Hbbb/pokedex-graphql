@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import Apollo
+
+let apollo = ApolloClient(url: URL(string: "https://graphql-pokemon.now.sh/graphql")!)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        apollo.cacheKeyForObject = { $0["id"] }
+
         // Override point for customization after application launch.
         return true
     }

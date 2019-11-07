@@ -1,0 +1,6 @@
+fragment PokemonSummary on Pokemon {
+  name
+  number
+  classification
+  weaknesses
+}

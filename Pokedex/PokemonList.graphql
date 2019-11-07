@@ -1,0 +1,5 @@
+query PokemonList($first: Int!) {
+  pokemons(first: $first) {
+    ...Detail
+  }
+}
